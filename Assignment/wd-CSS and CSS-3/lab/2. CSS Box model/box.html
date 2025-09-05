@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <style>
+    /* Center the card */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Profile card container */
+    .profile-card {
+      width: 300px;
+      background: #fff;
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      /* border-box example */
+      box-sizing: border-box;
+    }
+
+    /* Profile picture */
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #4CAF50;
+      margin-bottom: 15px;
+      /* content-box example */
+      box-sizing: content-box;
+    }
+
+    /* User name */
+    .profile-card h2 {
+      margin: 10px 0 5px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    /* User bio */
+    .profile-card p {
+      font-size: 14px;
+      color: #555;
+      margin: 0 0 15px;
+      padding: 0 10px;
+    }
+
+    /* Follow button */
+    .profile-card button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .profile-card button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://images.pexels.com/photos/2220337/pexels-photo-2220337.jpeg" alt="Profile Picture">
+    <h2>lion</h2>
+    <p>Web Developer | Tech Enthusiast | Coffee Lover</p>
+    <button>Follow</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid Example 2</title>
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #fafafa;
+            margin: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 12px 0 6px;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .card p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #3498db;
+            color: rgb(23, 0, 0);
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #b2c0ca;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:center; margin-bottom: 30px;">Shop Our Products</h1>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/161559/background-bitter-breakfast-bright-161559.jpeg?_gl=1*8ykaqc*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzIyMTMkajQ0JGwwJGgw"
+                alt="Product 1">
+            <h3>orange</h3>
+            <p>$59.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?_gl=1*i2f9wc*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzIzMzEkajQxJGwwJGgw"
+                alt="Product 2">
+            <h3>Smartwatch</h3>
+            <p>$129.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1313267/pexels-photo-1313267.jpeg?_gl=1*p7cdji*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzIzOTkkajQ1JGwwJGgw" alt="Product 3">
+            <h3>water melon</h3>
+            <p>$89.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/51312/kiwi-fruit-vitamins-healthy-eating-51312.jpeg?_gl=1*27w0r6*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzI0NjIkajU3JGwwJGgw" alt="Product 4">
+            <h3>kiwi</h3>
+            <p>$45.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?_gl=1*1yriqts*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzI1MDYkajEzJGwwJGgw" alt="Product 5">
+            <h3>apple</h3>
+            <p>$39.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/197907/pexels-photo-197907.jpeg?_gl=1*g01ntt*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzI1OTMkajYwJGwwJGgw" alt="Product 6">
+            <h3>graphs</h3>
+            <p>$79.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/566888/pexels-photo-566888.jpeg?_gl=1*1yxviqe*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzI2MzYkajE3JGwwJGgw" alt="Product 7">
+            <h3>strwberry</h3>
+            <p>$499.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1161547/pexels-photo-1161547.jpeg?_gl=1*1irvjaa*_ga*MTc2NDIwMDI1Ni4xNzU3MDcwOTY1*_ga_8JE65Q40S6*czE3NTcwNzA5NjUkbzEkZzEkdDE3NTcwNzI2NzMkajUyJGwwJGgw" alt="Product 8">
+            <h3>pineple</h3>
+            <p>$299.99</p>
+            <button class="btn">Add to Cart</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

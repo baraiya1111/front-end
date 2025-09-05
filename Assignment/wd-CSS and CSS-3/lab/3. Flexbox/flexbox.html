@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout Example 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+    }
+
+    .sidebar {
+      background: #4a90e2;
+      color: white;
+      padding: 20px;
+      width: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Push items apart */
+    }
+
+    .main {
+      flex: 1;
+      background: #f0f0f0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* try center or flex-end */
+      align-items: stretch;        /* try center or flex-start */
+    }
+
+    footer {
+      background: #222;
+    }
+
+    /* Responsive: sidebar moves on top */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flexbox Layout Made by HITESH</h1>
+  </header>
+
+  <div class="content">
+    <aside class="sidebar">
+      <div>
+        <p>Dashboard</p>
+        <p>Profile</p>
+        <p>Messages</p>
+      </div>
+      <div>
+        <p>Settings</p>
+        <p>Logout</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h2>Welcome!</h2>
+      <p>This is another example of a responsive layout built with Flexbox.</p>
+      <p>Resize the window to see the sidebar reposition itself.</p>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Flexbox Demo</p>
+  </footer>
+</body>
+</html>
